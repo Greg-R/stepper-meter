@@ -26,7 +26,7 @@ setGpio('P9.8');
 setGpio('P9.10');
 
 function step() {
-    
+    console.log("Changing state");
     setTimeout(() => {exec(`echo 0 > /sys/class/gpio/gpio67/value`)}, 1000);
     setTimeout(() => {exec(`echo 1 > /sys/class/gpio/gpio67/value`)}, 1000);
 }
