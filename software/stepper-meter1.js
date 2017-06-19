@@ -25,7 +25,7 @@ const exec = require('child_process').exec;
 setGpio('P9.8');
 setGpio('P9.10');
 
-step() => {
+function step() {
     
     setTimeout(exec(`echo 0 > /sys/class/gpio/gpio67/value`), 100);
     setTimeout(exec(`echo 1 > /sys/class/gpio/gpio67/value`), 100);
