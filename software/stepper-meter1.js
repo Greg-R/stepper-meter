@@ -32,5 +32,5 @@ function step() {
 }
 
 for(let i = 0; i < 100; i++) {
-setTimeout(step(), 100);
+setTimeout(() => {step()}, 100);
 };
