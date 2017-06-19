@@ -27,8 +27,8 @@ setGpio('P9.10');
 
 function step() {
     
-    setTimeout(exec(`echo 0 > /sys/class/gpio/gpio67/value`), 100);
-    setTimeout(exec(`echo 1 > /sys/class/gpio/gpio67/value`), 100);
+    setTimeout(() => {exec(`echo 0 > /sys/class/gpio/gpio67/value`)}, 100);
+    setTimeout(() => {exec(`echo 1 > /sys/class/gpio/gpio67/value`)}, 100);
 }
 
 for(let i = 0; i < 100; i++) {
