@@ -2,7 +2,7 @@
 
 //  stepper-gauge
 
-const b = require('bonescript');
+//const b = require('bonescript');
 const exec = require('child_process').exec;
 
 // Motor is attached here.
