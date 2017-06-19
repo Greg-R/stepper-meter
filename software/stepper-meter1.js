@@ -16,7 +16,7 @@ let controller = ["P9_11", "P9_13", "P9_15"]
 //  First use config-pin to set mode to GPIO output
 
 //  This function sets the header pin to GPIO mode, state=low and with pull-down.
-    setGpio(headerPin) {
+    setGpio(headerPin) => {
         const exec = require('child_process').exec;
         console.log(`Setting header pin ${headerPin} to GPIO mode.`);
         exec(`config-pin ${headerPin} low_pd`);
