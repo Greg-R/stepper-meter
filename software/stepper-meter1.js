@@ -42,7 +42,7 @@ let i = 0;
 polarity = 0;
 const intervalid = setInterval(function() {
     console.log(`The value of polarity is ${polarity}.`);
-    exec(`echo 0 > /sys/class/gpio/gpio68/value`);
+    exec(`echo 1 > /sys/class/gpio/gpio68/value`);
     switch(polarity) {
         case 0: exec(`echo 1 > /sys/class/gpio/gpio67/value`);
             break;
