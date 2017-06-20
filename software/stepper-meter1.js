@@ -36,6 +36,7 @@ function step() {
     step();
 };*/
 
+exec(`echo 1 > /sys/class/gpio/gpio68/value`);
 let i = 0;
 polarity = 0;
 const intervalid = setInterval(function() {
