@@ -31,7 +31,16 @@ function step() {
     setTimeout(() => {exec(`echo 1 > /sys/class/gpio/gpio67/value`)}, 1000);
 }
 
-for(let i = 0; i < 100; i++) {
+/*for(let i = 0; i < 100; i++) {
 //setTimeout(() => {step()}, 100);
     step();
-};
+};*/
+
+let i = 0;
+polarity = 0;
+const intervalid = setInterval(function() {
+    console.log(`The value of polarity is ${polarity}.`);
+                               polarity ? exec(`echo 1 > /sys/class/gpio/gpio67/value`) : exec(`echo 0 > /sys/class/gpio/gpio67/value`);
+                               polarity = polarity ? 0 : 1;
+    if(i++>100) return clearInterval(intervalid);
+                               }, 1000);
