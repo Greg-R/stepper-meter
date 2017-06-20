@@ -40,7 +40,12 @@ let i = 0;
 polarity = 0;
 const intervalid = setInterval(function() {
     console.log(`The value of polarity is ${polarity}.`);
-                               polarity ? exec(`echo 1 > /sys/class/gpio/gpio67/value`) : exec(`echo 0 > /sys/class/gpio/gpio67/value`);
+    switch(polarity) {
+        case 0: exec(`echo 1 > /sys/class/gpio/gpio67/value`);
+            break;
+        case 1: 
+            exec(`echo 0 > /sys/class/gpio/gpio67/value`)
+                   }
                                polarity = polarity ? 0 : 1;
     if(i++>100) return clearInterval(intervalid);
                                }, 1000);
