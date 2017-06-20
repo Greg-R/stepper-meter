@@ -48,4 +48,4 @@ const intervalid = setInterval(function() {
                    }
                                polarity = polarity ? 0 : 1;
     if(i++>100) return clearInterval(intervalid);
-                               }, 1000);
+                               }, 100);
