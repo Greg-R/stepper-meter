@@ -22,8 +22,8 @@ const exec = require('child_process').exec;
         exec(`config-pin ${headerPin} low_pd`);
     }
 
-setGpio('P9.8');
-setGpio('P9.10');
+setGpio('P8.8');
+setGpio('P8.10');
 
 function step() {
     console.log("Changing state");
